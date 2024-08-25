@@ -5,6 +5,12 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+    paths-ignore:
+      - '.github/workflows/*'
 
 jobs:
   deploy:
